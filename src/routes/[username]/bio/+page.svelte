@@ -10,7 +10,7 @@
 <main class="max-w-xl mx-auto w-11/12 md:w-8/12">
 	<p>Current Bio: <span class="text-info">{data.bio}</span></p>
 
-	<p>Status Code: {$page.status}</p>
+	<!-- <p>Status Code: {$page.status}</p> -->
 	<p class="text-error">{$page.form?.problem ?? ''}</p>
 
 	<form method="POST" use:enhance>

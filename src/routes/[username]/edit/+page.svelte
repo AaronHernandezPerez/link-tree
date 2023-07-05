@@ -25,7 +25,7 @@
 	$: titleIsValid = $formData.title.length < 20 && $formData.title.length > 0;
 	$: formIsValid = urlIsValid && titleIsValid;
 
-	async function addLink(e: SubmitEvent) {
+	async function addLink() {
 		if (!$user) {
 			console.error('addLink: No user found');
 			return;

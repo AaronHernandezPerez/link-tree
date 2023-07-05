@@ -25,6 +25,6 @@
 	// }
 </script>
 
-<div class="min-h-screen flex flex-col">
+<div class="w-full">
 	<slot />
 </div>

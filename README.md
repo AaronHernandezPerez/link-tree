@@ -1,24 +1,17 @@
-# create-svelte
+# Link Tree
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<p align="center">
+  <img src="docs/profile2.png" alt="Mobile view" width="256" />
+</p>
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+App made with Sveltekit, Firebase, TailwindCSS and Typescript. You can showcase your social media links and your projects.
 
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
+npm i
 npm run dev
 
 # or start the server and open the app in a new browser tab
@@ -35,4 +28,12 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Images
+
+<div>
+  <img src="docs/index.png" alt="Mobile view" width="256" />
+  <img src="docs/login.png" alt="Mobile view" width="256" />
+  <img src="docs/imageUpload.png" alt="Mobile view" width="256" />
+  <img src="docs/profile1.png" alt="Mobile view" width="256" />
+  <img src="docs/linkEdit.png" alt="Mobile view" width="256" />
+</div>

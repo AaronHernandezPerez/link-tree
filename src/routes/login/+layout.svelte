@@ -20,7 +20,7 @@
 </nav>
 
 <AnimatedRoute>
-	<main class="card w-4/6 bg-neutral text-neutral-content mx-auto">
+	<main class="max-w-xl mx-auto w-11/12 md:w-8/12">
 		<div class="card-body items-center text-center">
 			<slot />
 		</div>

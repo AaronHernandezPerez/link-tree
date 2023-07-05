@@ -13,16 +13,15 @@
 	<title>@{data.username} Links</title>
 	<meta name="description" content={data.bio} />
 </svelte:head>
-
 <main class="max-w-xl mx-auto w-11/12 md:w-8/12">
 	<h1 class="text-7xl text-purple-500 mb-8 text-center">@{data.username}</h1>
 
 	<img class="mx-auto" alt="photoURL" src={data.photoURL ?? userImage} width="256" />
 	<p class="text-xl my-8">{data.bio ?? 'No bio yet ...'}</p>
 
-	<ul class="list-none">
+	<ul class="list-none w-full">
 		{#each data.links as link}
-			<div class="my-5">
+			<div class="my-5 mx-auto">
 				<UserLink icon={link.icon} title={link.title} url={link.url} />
 			</div>
 		{/each}
@@ -30,7 +29,7 @@
 
 	{#if $userData?.username === data.username}
 		<p class="my-5">Edit your page</p>
-		<div class="flex gap-4">
+		<div class="flex justify-center flex-wrap gap-4 my-4">
 			<a
 				class="btn btn-primary"
 				aria-current={$page.url.pathname === '/about'}
@@ -46,8 +45,10 @@
 			>
 		</div>
 	{:else}
-		<p class="text-sm">
-			You like what you see? <a class="hover:text-primary" href="/login">create your own!</a>
+		<p class="text-sm text-center">
+			You like what you see? <a class="hover:text-primary underline" href="/login"
+				>create your own!</a
+			>
 		</p>
 	{/if}
 </main>
