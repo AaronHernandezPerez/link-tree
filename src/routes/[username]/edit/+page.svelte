@@ -78,6 +78,7 @@
 <main class="max-w-xl mx-auto w-11/12 md:w-8/12">
 	{#if $userData?.username == $page.params.username}
 		<h1 class="mx-2 text-2xl font-bold mt-8 mb-4 text-center">Edit your Profile links</h1>
+		<p class="text-sm text-center mb-4">Drag and drop to reorder your links</p>
 
 		<SortableList list={$userData?.links} on:sort={sortList} let:item>
 			<div class="relative">
