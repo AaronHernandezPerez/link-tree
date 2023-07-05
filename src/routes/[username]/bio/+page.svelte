@@ -7,7 +7,7 @@
 	export let data: PageData;
 </script>
 
-<main class="max-w-lg prose text-center mx-auto my-6">
+<main class="max-w-xl mx-auto w-11/12 md:w-8/12">
 	<p>Current Bio: <span class="text-info">{data.bio}</span></p>
 
 	<p>Status Code: {$page.status}</p>

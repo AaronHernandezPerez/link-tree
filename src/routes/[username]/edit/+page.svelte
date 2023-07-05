@@ -75,12 +75,18 @@
 	}
 </script>
 
-<main class="max-w-xl mx-auto">
+<main class="max-w-xl mx-auto w-11/12 md:w-8/12">
 	{#if $userData?.username == $page.params.username}
 		<h1 class="mx-2 text-2xl font-bold mt-8 mb-4 text-center">Edit your Profile links</h1>
 
 		<SortableList list={$userData?.links} on:sort={sortList} let:item>
-			<UserLink {...item} />
+			<div class="relative">
+				<button
+					class="absolute right-0 top-0 hover:bg-white rounded-full p-1"
+					on:click={() => deleteLink(item)}>❌</button
+				>
+				<UserLink {...item} />
+			</div>
 		</SortableList>
 
 		{#if showForm}
@@ -130,7 +136,7 @@
 			</button>
 		{/if}
 
-		<div class="flex justify-center">
+		<div class="flex justify-center my-5">
 			<a
 				class="btn btn-secondary"
 				aria-current={$page.url.pathname === '/about'}

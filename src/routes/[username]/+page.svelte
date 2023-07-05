@@ -14,8 +14,8 @@
 	<meta name="description" content={data.bio} />
 </svelte:head>
 
-<main class="prose text-center mx-auto mt-8">
-	<h1 class="text-7xl text-purple-500 mb-8">@{data.username}</h1>
+<main class="max-w-xl mx-auto w-11/12 md:w-8/12">
+	<h1 class="text-7xl text-purple-500 mb-8 text-center">@{data.username}</h1>
 
 	<img class="mx-auto" alt="photoURL" src={data.photoURL ?? userImage} width="256" />
 	<p class="text-xl my-8">{data.bio ?? 'No bio yet ...'}</p>

@@ -2,6 +2,7 @@ module.exports = {
 	root: true,
 	extends: [
 		'eslint:recommended',
+		'plugin:tailwindcss/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:svelte/recommended',
 		'prettier'
@@ -43,7 +44,8 @@ module.exports = {
 			}
 		],
 		'simple-import-sort/exports': 'warn',
-		'svelte/sort-attributes': 'warn'
+		'svelte/sort-attributes': 'warn',
+		'tailwindcss/no-custom-classname': 'off'
 	},
 	overrides: [
 		{

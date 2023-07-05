@@ -1,8 +1,9 @@
 import { error } from '@sveltejs/kit';
 import { collection, CollectionReference, getDocs, limit, query, where } from 'firebase/firestore';
 
-import type { FUserDoc } from '~types/firebase';
 import { db } from '$lib/firebase';
+
+import type { FUserDoc } from '~types/firebase';
 
 import type { PageLoad } from './$types';
 

@@ -61,7 +61,6 @@ export function docStore<T>(path: string) {
 	let unsubscribe: () => void;
 
 	const docRef = doc(db, path);
-	
 
 	const { subscribe } = writable<T | null>(null, (set) => {
 		unsubscribe = onSnapshot(docRef, (snapshot) => {
@@ -76,7 +75,7 @@ export function docStore<T>(path: string) {
 
 export const userData: Readable<FUserDoc | null> = derived(user, ($user, set) => {
 	if ($user) {
-		return docStore<FUserDoc>(`users/${$user.uid}`).subscribe(set)
+		return docStore<FUserDoc>(`users/${$user.uid}`).subscribe(set);
 	} else {
 		set(null);
 	}
